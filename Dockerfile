@@ -10,6 +10,7 @@ RUN \
   unzip -q /tmp/proto.zip -d /tmp/proto && \
   mv /tmp/proto/include/google/protobuf/ /tmp/proto/google/ && \
   mv /tmp/proto/google/ /proto/ && \
+  rm -rf /tmp/proto* && \
   go get \
     github.com/golang/protobuf/protoc-gen-go \
     github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger \
