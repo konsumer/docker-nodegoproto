@@ -1,6 +1,7 @@
 FROM alpine:3.5
 
-ENV GOPATH=/go
+ENV GOPATH=/go \
+  PATH=$PATH:/go/bin
 
 RUN \
   apk add --no-cache nodejs protobuf go git curl unzip libc-dev && \
